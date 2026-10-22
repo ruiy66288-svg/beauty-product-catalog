@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="森菲马美妆产品目录，按品牌查找商品、规格和产品图片。"><title>森菲马 · 产品目录</title><link rel="stylesheet" href="style.css"><script defer src="catalog.js"></script><script defer src="app.js"></script></head>
+<body>
+<header><a class="logo" href="./"><span class="mark">S</span><span>森菲马<small>BEAUTY COLLECTION</small></span></a><a class="nav" href="#catalog">浏览产品 <span>↗</span></a></header>
+<main>
+<section class="intro"><div><p class="eyebrow">SENFEIMA / PRODUCT CATALOG</p><h1>美妆选品，<br>一目了然。</h1><p class="lead">从日常护肤到精致彩妆，按品牌找到你需要的产品。</p><div class="intro-meta"><span><strong id="brandCount">—</strong> 个品牌分组</span><span><strong id="totalCount">—</strong> 条产品记录</span></div></div><div class="feature"><span class="feature-label">COLLECTION / 01</span><img id="heroImage" alt="产品目录精选展示"><span class="feature-bottom">护肤 · 彩妆 · 香氛 · 洗护</span></div></section>
+<section id="catalog" aria-labelledby="catalogTitle"><div class="section-head"><div><p class="eyebrow">EXPLORE THE COLLECTION</p><h2 id="catalogTitle">产品目录</h2></div><button class="text-button" id="download">导出当前清单 ↓</button></div>
+<form id="filters" role="search"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索产品名称、品牌或规格" aria-label="搜索产品名称、品牌或规格"></label><label><span class="sr-only">品牌</span><select id="brand"><option value="">全部品牌</option></select></label><label><span class="sr-only">包装类型</span><select id="form"><option value="">全部包装类型</option><option>正装</option><option>小样</option><option>礼盒</option><option>套盒</option></select></label><button type="reset" class="reset">重置</button></form>
+<div class="results-line"><p id="results" aria-live="polite"></p><span>点击产品查看详情</span></div><div class="grid" id="products"></div><div id="empty" hidden><h3>没有找到相关产品</h3><p>试试其他名称，或清除筛选条件。</p><button id="clearEmpty">清除筛选</button></div><div class="pagination"><button id="prev">← 上一页</button><span id="page" aria-live="polite"></span><button id="next">下一页 →</button></div>
+</section><section class="note"><span>目录说明</span><p>产品信息及图片根据供应商资料整理，规格、包装和供货情况请以实际确认结果为准。未提供的资料在详情中标注。</p></section></main>
+<footer><span>森菲马 · 产品目录</span><span>BEAUTY, SIMPLY PRESENTED.</span></footer>
+<dialog id="detail" aria-labelledby="detailTitle"><button class="close" aria-label="关闭详情">×</button><div id="detailBody"></div></dialog><div id="toast" role="status"></div>
+</body></html>
