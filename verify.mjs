@@ -10,3 +10,5 @@ assert.ok(!fs.readdirSync('dist').some(n=>/\.xlsx?$/.test(n)));
 console.log('PASS: 678 records, 38 groups, 670 image references, unique IDs, allowed fields and no price text.');
 
 assert.ok(!/贸易属性|资质资料|配送说明|p\.(trade|qualification|shipping)/.test(fs.readFileSync('dist/app.js','utf8')));
+
+for(const file of ['dist/index.html','dist/app.js']) assert.ok(!/森菲马|senfeima/i.test(fs.readFileSync(file,'utf8')));
