@@ -26,6 +26,7 @@ jobs:
         run: |
           node verify.mjs
           node --check dist/app.js
+          node --check dist/access.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

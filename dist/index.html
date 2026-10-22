@@ -1,7 +1,20 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="美妆产品目录，按品牌查找商品、规格和产品图片。"><title>美妆产品目录</title><link rel="stylesheet" href="style.css"><script defer src="catalog.js"></script><script defer src="app.js"></script></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="美妆产品目录"><title>美妆产品目录</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="access.css"><script defer src="access.js"></script></head>
 <body>
+<section id="accessGate" aria-labelledby="accessTitle">
+<form id="accessForm">
+<p class="eyebrow">BEAUTY COLLECTION</p>
+<h1 id="accessTitle">美妆产品目录</h1>
+<p class="access-hint">请输入访问密码，查看产品目录。</p>
+<label for="accessPassword">访问密码</label>
+<input id="accessPassword" type="password" autocomplete="current-password" required autofocus aria-describedby="accessError">
+<p id="accessError" role="alert"></p>
+<button id="accessSubmit" type="submit">进入目录 →</button>
+<noscript><p>请开启浏览器 JavaScript 后访问目录。</p></noscript>
+</form>
+</section>
+<template id="catalogContent">
 <header><a class="logo" href="./"><span>美妆产品目录<small>BEAUTY COLLECTION</small></span></a><a class="nav" href="#catalog">浏览产品 <span>↗</span></a></header>
 <main>
 <section class="intro"><div><p class="eyebrow">BEAUTY / PRODUCT CATALOG</p><h1>美妆选品，<br>一目了然。</h1><p class="lead">从日常护肤到精致彩妆，按品牌找到你需要的产品。</p><div class="intro-meta"><span><strong id="brandCount">—</strong> 个品牌分组</span><span><strong id="totalCount">—</strong> 条产品记录</span></div></div><div class="feature"><span class="feature-label">COLLECTION / 01</span><img id="heroImage" alt="产品目录精选展示"><span class="feature-bottom">护肤 · 彩妆 · 香氛 · 洗护</span></div></section>
@@ -11,4 +24,5 @@
 </section><section class="note"><span>目录说明</span><p>产品信息及图片根据供应商资料整理，规格、包装和供货情况请以实际确认结果为准。未提供的资料在详情中标注。</p></section></main>
 <footer><span>美妆产品目录</span><span>BEAUTY, SIMPLY PRESENTED.</span></footer>
 <dialog id="detail" aria-labelledby="detailTitle"><button class="close" aria-label="关闭详情">×</button><div id="detailBody"></div></dialog><div id="toast" role="status"></div>
+</template>
 </body></html>
